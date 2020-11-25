@@ -34,6 +34,12 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none; }
+  *::selection {
+    background: #000;
+    color: #fff; }
+  *::-moz-selection {
+    background: #000;
+    color: #fff; }
 
 html {
   font-size: 16px; }
@@ -56,10 +62,7 @@ header {
   font-size: 2rem;
   line-height: 38px;
   letter-spacing: 3px;
-  cursor: default;
-  transition: letter-spacing .7s; }
-  .header-logo span:hover {
-    letter-spacing: 6px; }
+  cursor: default; }
 
 .tabs-section {
   display: flex;

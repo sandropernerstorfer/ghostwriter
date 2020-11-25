@@ -9,6 +9,14 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    &::selection{
+        background: $pureBlack;
+        color: $pureWhite;
+    }
+    &::-moz-selection{
+        background: $pureBlack;
+        color: $pureWhite;
+    }
 }
 
 html{
@@ -39,10 +47,6 @@ header{
         line-height: 38px;
         letter-spacing: 3px;
         cursor: default;
-        transition: letter-spacing .7s;
-        &:hover{
-            letter-spacing: 6px;
-        }
     }
 }
 
