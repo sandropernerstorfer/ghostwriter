@@ -52,6 +52,7 @@ header{
     height: 135px;
     padding-top: 20px;
     background-color: $mainYellow;
+    color: #777777;
     -webkit-box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
     -moz-box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
     box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
@@ -62,8 +63,9 @@ header{
         align-content: center;
         background-color: $icyWhite;
         height: 2rem;
-        width: 90px;
-        font-size: 1.3rem;
+        width: 200px;
+        font-size: 1rem;
+        line-height: 2rem;
         opacity: .7;
         transition: opacity .7s;
         &:hover{
@@ -72,11 +74,28 @@ header{
         &:nth-child(1){
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
+            &:hover{
+                color: $mainBlue;
+            }
+        }
+        &:nth-child(2){
+            &:hover{
+                color: coral;
+            }
         }
         &:nth-child(3){
             border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;     
+            border-bottom-right-radius: 10px;
+            &:hover{
+                color: $mainDark;
+            }
         }
+    }
+    .tab-text{
+        font-family: "Nunito";
+        margin-right: 10px;
+        font-size: 1rem;
+        font-weight: 200;
     }
 }
 
