@@ -3,6 +3,11 @@
   src: url("../assets/fonts/Marker/Marker-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
+@font-face {
+  font-family: "Fredoka";
+  src: url("../assets/fonts/Fredoka-One/FredokaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +32,7 @@ header {
   background-color: #FFC900; }
 
 .header-logo span {
-  font-family: "Marker";
+  font-family: "Fredoka";
   font-size: 2rem;
   line-height: 38px;
   letter-spacing: 3px;
