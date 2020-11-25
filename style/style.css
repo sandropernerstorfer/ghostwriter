@@ -111,6 +111,7 @@ header {
   transform: translateX(-50%);
   background-color: #FFC900;
   padding: 25px;
+  padding-top: 20px;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.63);
@@ -119,6 +120,9 @@ header {
     width: 4.7rem;
     height: 5rem; }
 
+@media (max-width: 400px) {
+  .tab-text {
+    display: none; } }
 main {
   height: 100%;
   width: 100%; }
