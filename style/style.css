@@ -56,6 +56,7 @@ header {
   font-size: 2rem;
   line-height: 38px;
   letter-spacing: 3px;
+  cursor: default;
   transition: letter-spacing .7s; }
   .header-logo span:hover {
     letter-spacing: 6px; }
@@ -80,6 +81,7 @@ header {
     width: 200px;
     font-size: 1rem;
     line-height: 2rem;
+    cursor: pointer;
     opacity: .7;
     transition: opacity .5s, color .5s; }
     .tabs-section .tab:hover {
