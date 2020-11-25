@@ -40,8 +40,11 @@ header {
   justify-content: center;
   position: relative;
   height: 135px;
-  padding-top: 10px;
-  background-color: #FFC900; }
+  padding-top: 20px;
+  background-color: #FFC900;
+  -webkit-box-shadow: inset 3px -8px 25px -9px rgba(56, 56, 56, 0.81);
+  -moz-box-shadow: inset 3px -8px 25px -9px rgba(56, 56, 56, 0.81);
+  box-shadow: inset 3px -8px 25px -9px rgba(56, 56, 56, 0.81); }
   .tabs-section .tab {
     display: flex;
     justify-content: center;
