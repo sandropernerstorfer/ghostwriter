@@ -81,7 +81,7 @@ header {
     font-size: 1rem;
     line-height: 2rem;
     opacity: .7;
-    transition: opacity .7s; }
+    transition: opacity .5s, color .5s; }
     .tabs-section .tab:hover {
       opacity: 1; }
     .tabs-section .tab:nth-child(1) {
