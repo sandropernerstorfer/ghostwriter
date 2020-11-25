@@ -1,7 +1,9 @@
-# Welcome to the Repo for the Ghostwriter App !
+# Welcome to the Repo for Ghostwriter.js !
 
-This App is currently in development.
+Ghostwriter is a tool that will take two user inputs :
 
-The idea of Ghostwriter is that it generates a piece of JavaScript Code that will make your letters appear one after another!
-
-You choose the words and appear-time.
+* Text
+* Duration
+---
+Based on the input it will generate a piece of JavaScript Code and HTML  
+that will make the choosen Text appear letter for letter for the wanted duration.
