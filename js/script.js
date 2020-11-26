@@ -16,3 +16,9 @@ output.onkeydown = function(e) {
         return false;
     }
 }
+
+
+output.oninput = function() {
+  slider.value = this.value;
+  if(this.value==''){slider.value = 0};
+}
