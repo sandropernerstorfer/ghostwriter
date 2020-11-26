@@ -28,7 +28,7 @@ body{
     background-color: $mainYellow;
 }
 /* width */
-::-webkit-scrollbar {
+.output-window::-webkit-scrollbar {
     width: 0px;
   }
 
@@ -58,7 +58,7 @@ header{
     display: flex;
     justify-content: center;
     position: relative;
-    height: 135px;
+    height: 148px;
     padding-top: 20px;
     background-color: $mainYellow;
     color: #777777;
@@ -177,7 +177,11 @@ input[type=number]{
     -moz-appearance: textfield;
 }
 
-.preview-code{
+#timeInput{
+    width: 150px;
+}
+
+.preview-output{
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -195,4 +199,68 @@ input[type=number]{
         max-height: 150px;
         border-radius: 10px;
     }
+}
+
+@media(max-width:999px){
+    .box-1{
+        margin-bottom: 50px !important;
+    }
+}
+
+// ------------------------------------- //
+
+.code-output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box-3,.box-4{
+    width: 90%;
+    max-width: 700px;
+    margin: 0 10px 0px 10px;
+    padding: 20px 2%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+pre{
+    padding: 10px 5px;
+}
+
+.pre-html, .pre-js{
+    overflow-x: auto;
+    font-family: monospace;
+    width: 100%;
+}
+
+.box-3 i{
+    color: crimson;
+}
+.box-4 i{
+    color: $mainYellow;
+}
+
+.code-tag{
+    color: #E06B74;
+}
+.code-att{
+    color: #D29A66;
+}
+.code-value{
+    color: #98C479;
+}
+.code-decl{
+    color: #C678DC;
+}
+.code-name{
+    color: #D3C077;
+}
+.code-met{
+    color: #57B6C2;
+}
+.code-func{
+    color: #61AFEF;
 }
