@@ -48,10 +48,6 @@ body {
   overflow-x: hidden;
   background-color: #FFC900; }
 
-/* width */
-.output-window::-webkit-scrollbar {
-  width: 0px; }
-
 header {
   display: flex;
   justify-content: center;
@@ -111,6 +107,9 @@ header {
     font-size: 1rem;
     font-weight: 400; }
 
+@media (max-width: 400px) {
+  .tab-text {
+    display: none; } }
 .top-image {
   position: absolute;
   top: 80px;
@@ -127,9 +126,6 @@ header {
     width: 4.7rem;
     height: 5rem; }
 
-@media (max-width: 400px) {
-  .tab-text {
-    display: none; } }
 main {
   height: 100%;
   width: 100%;
@@ -145,7 +141,7 @@ main {
   background-color: #fff; }
   .working-section .box-1, .working-section .box-2 {
     flex: 1 1 30rem;
-    margin: 0 10px;
+    margin: 0 3%;
     padding: 20px 2%;
     border-radius: 10px;
     background-color: #fff;
@@ -157,17 +153,13 @@ main {
 form .text-muted {
   font-size: .9rem; }
 
-/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield; }
-
 #timeInput {
-  width: 150px; }
+  width: 150px;
+  -moz-appearance: textfield; }
 
 .preview-output {
   display: flex;
@@ -185,6 +177,8 @@ input[type=number] {
     min-height: 150px;
     max-height: 150px;
     border-radius: 10px; }
+  .preview-output .output-window::-webkit-scrollbar {
+    width: 0px; }
 
 @media (max-width: 999px) {
   .box-1 {
@@ -210,7 +204,8 @@ pre {
 .pre-html, .pre-js {
   overflow-x: auto;
   font-family: monospace;
-  width: 100%; }
+  width: 100%;
+  color: grey; }
 
 .box-3 i {
   color: crimson; }
@@ -219,24 +214,29 @@ pre {
   color: #FFC900; }
 
 .code-tag {
-  color: #E06B74; }
+  color: #cf352e; }
 
 .code-att {
-  color: #D29A66; }
+  color: #f28500; }
 
 .code-value {
-  color: #98C479; }
+  color: #50c878; }
 
 .code-decl {
-  color: #C678DC; }
+  color: #9400d3; }
 
 .code-name {
-  color: #D3C077; }
+  color: #FFC900; }
 
 .code-met {
-  color: #57B6C2; }
+  color: #1ca9c9; }
 
 .code-func {
-  color: #61AFEF; }
+  color: #007FFF; }
+
+footer {
+  background-color: #FFC900;
+  width: 100%;
+  height: 220px; }
 
 /*# sourceMappingURL=style.css.map */
