@@ -26,6 +26,7 @@ html{
 body{
     overflow-x: hidden;
     background-color: $mainYellow;
+    padding: 0 16px;
 }
 
 // -------------------------------------------- Header / Name ------------ //
@@ -118,7 +119,10 @@ header{
 @media(max-width:400px){
     .tab-text{
         display: none;
-    } 
+    }
+    body{
+        padding: 0 0;
+    }
 }
 
 #contact-text{
@@ -146,6 +150,10 @@ header{
     &:focus{
         border-color: $mainBlue !important;
     }
+}
+
+#submit-button{
+    width: 100px;
 }
 
 // -------------------------------------------- Logo Image ------------ //
@@ -340,6 +348,8 @@ footer{
         padding: 0 20px;
         height: 148px;
         width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         -webkit-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
         -moz-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
         box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
