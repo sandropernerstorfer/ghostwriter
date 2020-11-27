@@ -138,9 +138,9 @@ header {
 
 @keyframes MoveUpDown {
   0%, 100% {
-    margin-top: 6px; }
+    margin-top: 3px; }
   50% {
-    margin-top: 0px; } }
+    margin-top: -3px; } }
 main {
   height: 100%;
   width: 100%;
