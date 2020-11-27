@@ -50,6 +50,14 @@ header{
     }
 }
 
+@media(max-width:300px){
+    .header-logo{
+        span{
+            font-size: 1.5rem;
+        }
+    }
+}
+
 // -------------------------------------------- Nav / Tabs ------------ //
 
 .tabs-section{
@@ -289,11 +297,47 @@ footer{
     background-color: $mainYellow;
     width: 100%;
     .footer-box-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
         height: 148px;
         width: 100%;
         -webkit-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
         -moz-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
         box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+        .footer-logo{
+            img{
+                width: 2.8rem;
+                height: 3rem;
+            }
+            span{
+                margin-left: 10px;
+                line-height: 3rem;
+                color: $icyWhite;
+                font-size: 1.2rem;
+                font-family: "Fredoka";
+            }
+        }
+        .footer-links{
+            margin-right: 10px;
+            font-size: 2rem;
+            line-height: 3rem;
+            color: $icyWhite;
+        }
+        @media(max-width:520px){
+            .footer-box{
+                padding: 0 5px;
+            }
+            .footer-logo{
+                img{
+                    display: none;
+                }
+                span{
+                    margin-left: 0;
+                }
+            }
+        }
     }
     .footer-box-2{
         height: 70px;

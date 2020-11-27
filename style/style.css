@@ -64,6 +64,9 @@ header {
   letter-spacing: 3px;
   cursor: default; }
 
+@media (max-width: 300px) {
+  .header-logo span {
+    font-size: 1.5rem; } }
 .tabs-section {
   display: flex;
   justify-content: center;
@@ -254,11 +257,36 @@ footer {
   background-color: #FFC900;
   width: 100%; }
   footer .footer-box-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     height: 148px;
     width: 100%;
     -webkit-box-shadow: inset 0px 6px 22px -6px rgba(56, 56, 56, 0.81);
     -moz-box-shadow: inset 0px 6px 22px -6px rgba(56, 56, 56, 0.81);
     box-shadow: inset 0px 6px 22px -6px rgba(56, 56, 56, 0.81); }
+    footer .footer-box-1 .footer-logo img {
+      width: 2.8rem;
+      height: 3rem; }
+    footer .footer-box-1 .footer-logo span {
+      margin-left: 10px;
+      line-height: 3rem;
+      color: #F7FCFC;
+      font-size: 1.2rem;
+      font-family: "Fredoka"; }
+    footer .footer-box-1 .footer-links {
+      margin-right: 10px;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #F7FCFC; }
+    @media (max-width: 520px) {
+      footer .footer-box-1 .footer-box {
+        padding: 0 5px; }
+      footer .footer-box-1 .footer-logo img {
+        display: none; }
+      footer .footer-box-1 .footer-logo span {
+        margin-left: 0; } }
   footer .footer-box-2 {
     height: 70px;
     width: 100%; }
