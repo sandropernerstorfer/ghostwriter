@@ -31,13 +31,13 @@
     </header>
 <!-- NAV TABS -->
     <nav class="tabs-section">
-        <div class="tab">
-            <span data-toggle="modal" data-target="#contact-modal"><span class="tab-text">Contact</span><i class="fas fa-paper-plane"></i></span>
+        <div class="tab" data-toggle="modal" data-target="#contact-modal">
+            <span><span class="tab-text">Contact</span><i class="fas fa-paper-plane"></i></span>
         </div>
-        <div class="tab">
+        <div class="tab" id="light-btn">
             <span><span class="tab-text">Light</span><i class="fas fa-sun"></i></span>
         </div>
-        <div class="tab">
+        <div class="tab" id="dark-btn">
             <span><span class="tab-text">Dark</span><i class="fas fa-moon"></i></span>
         </div>
         <div class="top-image">
@@ -68,7 +68,7 @@
                         <button type="submit" disabled id="submit-button" class="btn btn-warning mr-2">Send</button>
                         <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-outline-secondary">Close &times;</button>
                       </form>
-                      <iframe name="hidden-frame" style="position:absolute; top:-1px; left:-1px; width:1px; height:1px;"></iframe>
+                      <iframe name="hidden-frame" style="position:absolute; top:-1px; left:-1px; width:1px; height:1px; opacity: 0;"></iframe>
                 </div>
             </div>
         </div>
@@ -79,13 +79,13 @@
             <div class="box-1">
                 <form>
                     <div class="form-group mb-4">
-                      <label class="mb-0" for="formGroupExampleInput"><h5><span class="badge badge-pill badge-primary"><i class="fas fa-pen-alt"></i>&nbsp;&nbsp;Text</span></h5></label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                      <label class="mb-0" for="input-text"><h5><span class="badge badge-pill badge-primary form-badge"><i class="fas fa-pen-alt"></i>&nbsp;&nbsp;Text</span></h5></label>
+                      <input type="text" class="form-control" id="input-text" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label class="mb-0" for="formControlRange"><h5><span class="badge badge-pill badge-primary"><i class="fas fa-stopwatch"></i>&nbsp;&nbsp;Time</span></h5></label>
+                        <label class="mb-0" for="input-range"><h5><span class="badge badge-pill badge-primary form-badge"><i class="fas fa-stopwatch"></i>&nbsp;&nbsp;Time</span></h5></label>
                         <br><span class="text-muted">&nbsp;in milliseconds</span>
-                        <input type="range" min="0" max="5000" value="0" class="slider form-control-range" id="formControlRange">
+                        <input type="range" min="0" max="5000" value="0" class="slider form-control-range" id="input-range">
                     </div>
                     <div class="form-group mt-4">
                       <input type="number" min="0" max="5000" class="form-control" id="timeInput">
@@ -94,7 +94,7 @@
             </div>
             <div class="box-2">
                 <div class="preview-output">
-                    <h4><span class="badge badge-pill badge-primary"><i class="fas fa-search"></i>&nbsp;&nbsp;Preview</span></h4>
+                    <h4><span class="badge badge-pill badge-primary form-badge"><i class="fas fa-search"></i>&nbsp;&nbsp;Preview</span></h4>
                     <hr>
                     <div class="output-window">
                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sit quae placeat necessitatibus? Minus, maxime neque ipsa nisi voluptate enim?</span><br>
@@ -103,14 +103,14 @@
                 </div>
             </div>
         </section>
-        <section class="code-output mt-5">
+        <section class="code-output mt-5" id="code-output-id">
             <div class="box-3">
-                <h4><span class="badge badge-pill badge-light"><i class="fab fa-html5"></i>&nbsp;&nbsp;HTML</span></h4>
+                <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-html5"></i>&nbsp;&nbsp;HTML</span></h4>
                 <hr>
                 <pre class="pre-html mb-0"><span class="code-tag">&lt;span</span><span><span class="code-att"> id</span>=<span class="code-value">"typed-text"</span></span><span class="code-tag">&gt;&lt;/span&gt;</span></pre>
             </div>
             <div class="box-4">
-                <h4><span class="badge badge-pill badge-light"><i class="fab fa-js-square"></i>&nbsp;&nbsp;JavaScript</span></h4>
+                <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-js-square"></i>&nbsp;&nbsp;JavaScript</span></h4>
                 <hr>
                 <pre class="pre-js"><span class="code-decl">const</span><span class="code-name"> typedSpace</span> = <span class="code-name">document</span>.<span class="code-met">getElementById</span>(<span class="code-value">'typed-text'</span>);<br><span class="code-decl">const</span><span class="code-name"> typedText</span> = <span class="code-value">'INSERT TEXTNSERT TEXTNSERT'</span>.<span class="code-met">split</span>(<span class="code-value">''</span>);<br><br><span class="code-decl">for</span> (<span class="code-decl">let</span> <span class="code-tag">i</span> = <span class="code-att">0</span>; <span class="code-tag">i</span> <<span class="code-name"> typedText</span>.<span class="code-tag">length</span>; <span class="code-tag">i</span>++) {<br><br>    <span class="code-met">setTimeout</span>(<span class="code-decl">function</span> <span class="code-func">timer</span>(){<br>        <span class="code-name">typedSpace</span>.<span class="code-tag">textContent</span> += <span class="code-name">typedText</span>[<span class="code-tag">i</span>];<br>    }, <span class="code-tag">i</span> * <span class="code-att">50</span>);<br><br>};</pre>
             </div>

@@ -254,18 +254,25 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   align-items: center;
   width: 100%; }
 
+.code-badge {
+  background-color: #fff; }
+
 .box-3, .box-4 {
   width: 90%;
   max-width: 700px;
   margin: 0 10px 0px 10px;
   padding: 20px 2%;
-  border: 1px solid #ccc; }
+  background-color: #fff; }
 
 .box-3 {
-  border-bottom: none; }
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
 
 .box-4 {
-  border-top: none; }
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
 
 pre {
   padding: 10px 5px; }
@@ -274,34 +281,16 @@ pre {
   overflow-x: auto;
   font-family: "Inconsolata";
   width: 100%;
-  color: grey; }
+  padding-left: 10px;
+  color: #272727;
+  background-color: rgba(204, 204, 204, 0.274);
+  border-radius: 10px; }
 
 .box-3 i {
   color: crimson; }
 
 .box-4 i {
   color: #FFC900; }
-
-.code-tag {
-  color: #cf352e; }
-
-.code-att {
-  color: #f28500; }
-
-.code-value {
-  color: #50c878; }
-
-.code-decl {
-  color: #9400d3; }
-
-.code-name {
-  color: #FFC900; }
-
-.code-met {
-  color: #1ca9c9; }
-
-.code-func {
-  color: #007FFF; }
 
 footer {
   background-color: #FFC900;
