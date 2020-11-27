@@ -265,7 +265,7 @@ pre{
 
 .pre-html, .pre-js{
     overflow-x: auto;
-    font-family: monospace;
+    font-family: "Inconsolata";
     width: 100%;
     color: grey;
 }
@@ -339,7 +339,7 @@ footer{
                 transition: font-size .8s, transform .8s;
                 &:hover{
                     font-size: 2.2rem;
-                    transform: rotate(20deg);
+                    transform: rotate(12deg);
                 }
             }
         }
