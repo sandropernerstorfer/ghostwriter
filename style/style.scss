@@ -127,6 +127,7 @@ header{
     position: absolute;
     top: 80px;
     left: 50%;
+    height: 8rem;
     transform: translateX(-50%);
     background-color: $mainYellow;
     padding: 25px;
@@ -138,6 +139,15 @@ header{
     img{
         width: 4.7rem;
         height: 5rem;
+        animation: MoveUpDown 1.2s linear infinite;
+    }
+}
+@keyframes MoveUpDown {
+    0%, 100% {
+        margin-top: 6px;
+    }
+    50% {
+        margin-top: 0px;
     }
 }
 
@@ -323,7 +333,15 @@ footer{
             margin-right: 10px;
             font-size: 2rem;
             line-height: 3rem;
-            color: $icyWhite;
+            a{
+                color: $icyWhite;
+                display: inline-block;
+                transition: font-size .8s, transform .8s;
+                &:hover{
+                    font-size: 2.2rem;
+                    transform: rotate(20deg);
+                }
+            }
         }
         @media(max-width:520px){
             .footer-box{

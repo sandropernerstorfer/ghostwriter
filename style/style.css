@@ -117,6 +117,7 @@ header {
   position: absolute;
   top: 80px;
   left: 50%;
+  height: 8rem;
   transform: translateX(-50%);
   background-color: #FFC900;
   padding: 25px;
@@ -127,8 +128,14 @@ header {
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.63); }
   .top-image img {
     width: 4.7rem;
-    height: 5rem; }
+    height: 5rem;
+    animation: MoveUpDown 1.2s linear infinite; }
 
+@keyframes MoveUpDown {
+  0%, 100% {
+    margin-top: 6px; }
+  50% {
+    margin-top: 0px; } }
 main {
   height: 100%;
   width: 100%;
@@ -278,8 +285,14 @@ footer {
     footer .footer-box-1 .footer-links {
       margin-right: 10px;
       font-size: 2rem;
-      line-height: 3rem;
-      color: #F7FCFC; }
+      line-height: 3rem; }
+      footer .footer-box-1 .footer-links a {
+        color: #F7FCFC;
+        display: inline-block;
+        transition: font-size .8s, transform .8s; }
+        footer .footer-box-1 .footer-links a:hover {
+          font-size: 2.2rem;
+          transform: rotate(20deg); }
     @media (max-width: 520px) {
       footer .footer-box-1 .footer-box {
         padding: 0 5px; }
