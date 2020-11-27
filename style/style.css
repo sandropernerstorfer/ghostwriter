@@ -118,6 +118,27 @@ header {
 @media (max-width: 400px) {
   .tab-text {
     display: none; } }
+#contact-text {
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: inset 5px 5px 10px rgba(95, 95, 95, 0.178), inset -5px -5px 10px #F7FCFC; }
+
+.modal-content {
+  border: none;
+  border-radius: 20px; }
+
+.modal-header {
+  background-color: #FFC900;
+  color: #F7FCFC; }
+
+.contact-message {
+  resize: none;
+  border: 2px solid #ccc !important; }
+  .contact-message:focus {
+    border-color: #4995FF !important; }
+
 .top-image {
   position: absolute;
   top: 80px;

@@ -121,6 +121,32 @@ header{
     } 
 }
 
+#contact-text{
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 5px 5px 10px rgba(95, 95, 95, 0.178), inset -5px -5px 10px $icyWhite;
+}
+
+.modal-content{
+    border: none;
+    border-radius: 20px;
+}
+
+.modal-header{
+    background-color: $mainYellow;
+    color: $icyWhite;
+}
+
+.contact-message{
+    resize: none;
+    border: 2px solid #ccc !important;
+    &:focus{
+        border-color: $mainBlue !important;
+    }
+}
+
 // -------------------------------------------- Logo Image ------------ //
 
 .top-image{
