@@ -123,15 +123,16 @@ header{
 
 #contact-text{
     text-align: center;
-    border-radius: 20px;
     padding: 10px;
     margin-bottom: 20px;
-    box-shadow: inset 5px 5px 10px rgba(95, 95, 95, 0.178), inset -5px -5px 10px $icyWhite;
+    font-weight: 200;
+    color: #424242;
 }
 
 .modal-content{
     border: none;
     border-radius: 20px;
+    font-family: "Nunito";
 }
 
 .modal-header{
