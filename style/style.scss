@@ -288,5 +288,15 @@ pre{
 footer{
     background-color: $mainYellow;
     width: 100%;
-    height: 220px;
+    .footer-box-1{
+        height: 148px;
+        width: 100%;
+        -webkit-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+        -moz-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+        box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+    }
+    .footer-box-2{
+        height: 70px;
+        width: 100%;
+    }
 }
