@@ -35,10 +35,10 @@
   list-style-type: none;
   text-decoration: none; }
   *::selection {
-    background: #000;
+    background: #FFC900;
     color: #fff; }
   *::-moz-selection {
-    background: #000;
+    background: #FFC900;
     color: #fff; }
 
 html {
@@ -141,7 +141,7 @@ main {
   background-color: #fff; }
   .working-section .box-1, .working-section .box-2 {
     flex: 1 1 30rem;
-    margin: 0 3%;
+    margin: 20px 3%;
     padding: 20px 2%;
     border-radius: 10px;
     background-color: #fff;
@@ -158,7 +158,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0; }
 
 #timeInput {
-  width: 150px;
+  width: 100px;
   -moz-appearance: textfield; }
 
 .preview-output {
@@ -176,13 +176,24 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     height: 100%;
     min-height: 150px;
     max-height: 150px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    font-family: "Nunito";
+    font-weight: 600;
+    color: gray;
+    font-size: 1rem; }
   .preview-output .output-window::-webkit-scrollbar {
     width: 0px; }
 
-@media (max-width: 999px) {
-  .box-1 {
-    margin-bottom: 50px !important; } }
+.form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: border-color .7s; }
+  .form-control:focus {
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #4995FF; }
+
 .code-output {
   display: flex;
   flex-direction: column;
@@ -195,8 +206,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   max-width: 700px;
   margin: 0 10px 0px 10px;
   padding: 20px 2%;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc; }
+  border: 1px solid #ccc; }
+
+.box-3 {
+  border-bottom: none; }
+
+.box-4 {
+  border-top: none; }
 
 pre {
   padding: 10px 5px; }
