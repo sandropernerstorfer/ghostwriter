@@ -77,3 +77,19 @@ output.oninput = function() {
   slider.value = this.value;
   if(this.value==''){slider.value = 0};
 }
+
+
+
+// Code Copy Functionality
+
+document.getElementById('copy-js').addEventListener('click', copyToClipboard);
+
+function copyToClipboard(){
+ 
+  let codeToBeCopied = document.getElementById('code-js').innerText;
+  let tempTextarea = document.getElementById('copy-textarea');
+  tempTextarea.innerHTML = codeToBeCopied;
+  tempTextarea.select();
+  document.execCommand('copy');
+
+  }
