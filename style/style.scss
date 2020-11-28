@@ -1,6 +1,79 @@
 @import 'colors','fonts';
 // -------------------------- //
-
+//----------------------------------------------- DARK / LIGHT Variables
+[data-theme="dark"] {
+    //----------------------backgrounds
+    --bg-color1: #242425;
+    --bg-color2: #2E2E2E;
+    --bg-color3: #2E2E2E;
+    --bg-color4: #2E2E2E;
+    --bg-color5: #272727;
+    --bg-color6: #FFC900;
+    --bg-color7: #242425;
+    --bg-color8: #272727;
+    //----------------------colors
+    --color1: #ccc;
+    --color2: #000;
+    --color3: #ccc;
+    --color4: #fff;
+    --color5: #ccc;
+    --color6: #000;
+    --color7: #777777;
+    //----------------------border-colors
+    --border-color1: #333333;
+    --border-color2: #FFC900;
+    //----------------------shadows
+    //main
+    --box-shdw1: none;
+    //tabs-section
+    --box-shdw2: none;
+    //box-1 + box-2
+    --box-shdw3: none;
+    //footer-box-1
+    --box-shdw4: none;
+    //----------------------border-radius
+    --radius1: 20px;
+    //----------------------opacity
+    --opacity1: 1;
+    --opacity2: .7;
+}
+[data-theme="light"] {
+    //----------------------backgrounds
+    --bg-color1: #FFC900;
+    --bg-color2: #FFC900;
+    --bg-color3: #fff;
+    --bg-color4: #fff;
+    --bg-color5: #fff;
+    --bg-color6: #037BFE;
+    --bg-color7: #fff;
+    --bg-color8: #FFC900;
+    //----------------------colors
+    --color1: #485056;
+    --color2: #fff;
+    --color3: #485056;
+    --color4: #272727;
+    --color5: #272727;
+    --color6: #777777;
+    --color7: coral;
+    //----------------------border-colors
+    --border-color1: #ccc;
+    --border-color2: #ccc;
+    //----------------------shadows
+    //main
+    --box-shdw1: inset -5px 0 5px -5px #333,inset 5px 0 5px -5px #333;
+    //tabs-section
+    --box-shdw2: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
+    //box-1 + box-2
+    --box-shdw3: 0px 0px 16px -5px rgba(92,92,92,1);
+    //footer-box-1
+    --box-shdw4: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+    //----------------------border-radius
+    --radius1: 0px;
+    //----------------------opacity
+    --opacity1: .7;
+    --opacity2: 1;
+}
+// ------------------------------------------------ //
 // ----- Base Settings ----- //
 
 *{
@@ -25,8 +98,9 @@ html{
 
 body{
     overflow-x: hidden;
-    background-color: $mainYellow;
+    background-color: var(--bg-color1);
     padding: 0 16px;
+    transition: background-color .5s;
 }
 
 // -------------------------------------------- Header / Name ------------ //
@@ -38,7 +112,8 @@ header{
     color: $icyWhite;
     padding: 20px 0 10px 0;
     height: 70px;
-    background-color: $mainYellow;
+    background-color: var(--bg-color1);
+    transition: background-color .5s;
 }
 
 .header-logo{
@@ -67,13 +142,14 @@ header{
     position: relative;
     height: 148px;
     padding-top: 20px;
-    background-color: $mainYellow;
+    background-color: var(--bg-color1);
     color: #777777;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    -webkit-box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
-    -moz-box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
-    box-shadow: inset 3px -8px 25px -9px rgba(56,56,56,0.81);
+    -webkit-box-shadow: var(--box-shdw2);
+    -moz-box-shadow: var(--box-shdw2);
+    box-shadow: var(--box-shdw2);
+    transition: background-color .5s,box-shadow .5s;
 
     .tab{
         display: flex;
@@ -99,15 +175,23 @@ header{
             }
         }
         &:nth-child(2){
+            opacity: var(--opacity2);
+            color: var(--color7);
+            transition: opacity .5s, color .5s;
             &:hover{
+                opacity: 1;
                 color: coral;
             }
         }
         &:nth-child(3){
+            opacity: var(--opacity1);
+            color: var(--color6);
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             margin-right: 10px;
+            transition: opacity .5s, color .5s;
             &:hover{
+                opacity: 1;
                 color: $mainDark;
             }
         }
@@ -134,23 +218,44 @@ header{
     padding: 10px;
     margin-bottom: 20px;
     font-weight: 200;
-    color: #424242;
+    color: var(--color5);
 }
 
 .modal-content{
     border: none;
     border-radius: 20px;
     font-family: "Nunito";
+    background-color: var(--bg-color5);
 }
 
 .modal-header{
-    background-color: $mainYellow;
+    background-color: var(--bg-color8);
     color: $icyWhite;
     border-bottom-color: $mainYellow;
 }
 
+#name{
+    color: var(--color1);
+    border-color: var(--border-color2);
+    background-color: var(--bg-color5);
+}
+
+#email{
+    color: var(--color1);
+    border-color: var(--border-color2);
+    background-color: var(--bg-color5);
+}
+
 .contact-message{
     resize: none;
+    color: var(--color5);
+    background-color: var(--bg-color5);
+    border: 2px solid var(--border-color2) !important;
+    border-radius: 10px !important;
+    &:focus{
+        background-color: var(--bg-color5);
+        color: var(--color5);
+    }
 }
 
 #submit-button{
@@ -193,8 +298,13 @@ main{
     height: 100%;
     width: 100%;
     padding: 80px 0;
-    background-color: $pureWhite;
-    box-shadow: inset -5px 0 5px -5px #333, inset 5px 0 5px -5px #333;
+    border-top-left-radius: var(--radius1);
+    border-top-right-radius: var(--radius1);
+    background-color: var(--bg-color3);
+    -webkit-box-shadow: var(--box-shdw1);
+    -moz-box-shadow: var(--box-shdw1);
+    box-shadow: var(--box-shdw1);
+    transition: background-color .5s,border-radius .5s,box-shadow .5s;
 }
 
 @media(max-width:400px){
@@ -212,18 +322,26 @@ main{
     align-content: center;
     flex-wrap: wrap;
     margin: 0 5px;
-    background-color: $pureWhite;
+    background-color: var(--bg-color4);
+    transition: background-color .5s;
     .box-1,.box-2{
         flex: 1 1 30rem;
         margin: 20px 3%;
         padding: 20px 2%;
         border-radius: 10px;
-        background-color: $pureWhite;
+        background-color: var(--bg-color5);
         width: 50%;
-        -webkit-box-shadow: 0px 0px 16px -5px rgba(92,92,92,1);
-        -moz-box-shadow: 0px 0px 16px -5px rgba(92,92,92,1);
-        box-shadow: 0px 0px 16px -5px rgba(92,92,92,1);
+        -webkit-box-shadow: var(--box-shdw3);
+        -moz-box-shadow: var(--box-shdw3);
+        box-shadow: var(--box-shdw3);
+        transition: background-color .5s,box-shadow .5s;
     }
+}
+
+.form-badge{
+    color: var(--color2);
+    background-color: var(--bg-color6);
+    transition: background-color .5s,color .5s;
 }
 
 form .text-muted{
@@ -235,9 +353,20 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     margin: 0;
 }
 
+#input-text{
+    background-color: var(--bg-color5);
+    color: var(--color1);
+    border-color: var(--border-color1);
+    transition: background-color .5s, color .5s, border-color .5s;
+}
+
 #timeInput{
     width: 100px;
+    color: var(--color1);
+    border-color: var(--border-color1);
+    background-color: var(--bg-color5);
     -moz-appearance: textfield;
+    transition: background-color .5s,color .5s,border-color .5s;
 }
 
 .preview-output{
@@ -259,8 +388,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
         border-radius: 10px;
         font-family: "Nunito";
         font-weight: 600;
-        color: gray;
+        color: var(--color1);
+        border-color: var(--border-color1);
         font-size: 1rem;
+        background-color: var(--bg-color5);
+        transition: background-color .5s,border-color .5s,color .5s;
     }
     .output-window::-webkit-scrollbar {
         width: 0px;
@@ -275,7 +407,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     &:focus{
     border: none;
     box-shadow: none;
-    border-bottom: 2px solid $mainBlue;
+    border-bottom: 2px solid #ccc;
     }
 }
 
@@ -290,7 +422,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 }
 
 .code-badge{
-    background-color: $pureWhite;
+    color: var(--color3);
+    background-color: var(--bg-color7);
+    transition: background-color .5s,color .5s;
 }
 
 .box-3,.box-4{
@@ -298,7 +432,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     max-width: 700px;
     margin: 0 10px 0px 10px;
     padding: 20px 2%;
-    background-color: #fff;
+    background-color: var(--bg-color4);
+    transition: background-color .5s;
 }
 .box-3{
     border-bottom: none;
@@ -320,9 +455,10 @@ pre{
     font-family: "Inconsolata";
     width: 100%;
     padding-left: 10px;
-    color: #272727;
+    color: var(--color4);
     background-color: rgba(204, 204, 204, 0.274);
     border-radius: 10px;
+    transition: color .5s;
 }
 
 .box-3 i{
@@ -332,35 +468,12 @@ pre{
     color: $mainYellow;
 }
 
-// -------- Code Colors -------- //
-
-// .code-tag{
-//     color: #cf352e;
-// }
-// .code-att{
-//     color: #f28500;
-// }
-// .code-value{
-//     color: #50c878;
-// }
-// .code-decl{
-//     color: #9400d3;
-// }
-// .code-name{
-//     color: $mainYellow;
-// }
-// .code-met{
-//     color: #1ca9c9;
-// }
-// .code-func{
-//     color: #007FFF;
-// }
-
 // -------------------------------------------- Footer ------------ //
 
 footer{
-    background-color: $mainYellow;
+    background-color: var(--bg-color1);
     width: 100%;
+    transition: background-color .5s;
     .footer-box-1{
         display: flex;
         justify-content: space-between;
@@ -368,11 +481,13 @@ footer{
         padding: 0 20px;
         height: 148px;
         width: 100%;
+        background-color: var(--bg-color2);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        -webkit-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
-        -moz-box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
-        box-shadow: inset 0px 6px 22px -6px rgba(56,56,56,0.81);
+        -webkit-box-shadow: var(--box-shdw4);
+        -moz-box-shadow: var(--box-shdw4);
+        box-shadow: var(--box-shdw4);
+        transition: background-color .5s,border-radius .5s,box-shadow .5s;
         .footer-logo{
             img{
                 width: 2.8rem;
@@ -415,8 +530,10 @@ footer{
         }
     }
     .footer-box-2{
+        background-color: var(--bg-color1);
         height: 70px;
         width: 100%;
+        transition: background-color .5s;
     }
 }
 
