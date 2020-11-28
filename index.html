@@ -107,12 +107,12 @@
             <div class="box-3">
                 <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-html5"></i>&nbsp;&nbsp;HTML</span></h4>
                 <hr>
-                <pre class="pre-html mb-0"><span class="code-tag">&lt;span</span><span><span class="code-att"> id</span>=<span class="code-value">"typed-text"</span></span><span class="code-tag">&gt;&lt;/span&gt;</span></pre>
+                <pre class="pre-html mb-0">&lt;span id="typed-text"&gt;&lt;/span&gt;</pre>
             </div>
             <div class="box-4">
                 <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-js-square"></i>&nbsp;&nbsp;JavaScript</span></h4>
                 <hr>
-                <pre class="pre-js"><span class="code-decl">const</span><span class="code-name"> typedSpace</span> = <span class="code-name">document</span>.<span class="code-met">getElementById</span>(<span class="code-value">'typed-text'</span>);<br><span class="code-decl">const</span><span class="code-name"> typedText</span> = <span class="code-value">'INSERT TEXTNSERT TEXTNSERT'</span>.<span class="code-met">split</span>(<span class="code-value">''</span>);<br><br><span class="code-decl">for</span> (<span class="code-decl">let</span> <span class="code-tag">i</span> = <span class="code-att">0</span>; <span class="code-tag">i</span> <<span class="code-name"> typedText</span>.<span class="code-tag">length</span>; <span class="code-tag">i</span>++) {<br><br>    <span class="code-met">setTimeout</span>(<span class="code-decl">function</span> <span class="code-func">timer</span>(){<br>        <span class="code-name">typedSpace</span>.<span class="code-tag">textContent</span> += <span class="code-name">typedText</span>[<span class="code-tag">i</span>];<br>    }, <span class="code-tag">i</span> * <span class="code-att">50</span>);<br><br>};</pre>
+                <pre class="pre-js">const typedSpace = document.getElementById('typed-text');<br>const typedText = 'INSERT TEXTNSERT TEXTNSERT'.split('');<br><br>for (let i = 0; i < typedText.length; i++) {<br><br>    setTimeout(function timer(){<br>        typedSpace.textContent += typedText[i];<br>    }, i * 50);<br><br>};</pre>
             </div>
         </section>
     </main>
