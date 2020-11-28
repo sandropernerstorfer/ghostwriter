@@ -104,13 +104,20 @@
             </div>
         </section>
         <section class="code-output mt-5" id="code-output-id">
+            <span id="copy-both" class="badge badge-pill badge-warning">COPY BOTH <i class="far fa-clipboard"></i></span>
             <div class="box-3">
-                <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-html5"></i>&nbsp;&nbsp;HTML</span></h4>
+                <div class="code-copy-row">
+                    <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-html5"></i>&nbsp;&nbsp;HTML</span></h4>
+                    <h4><span class="badge badge-pill copy-single"><i class="far fa-clipboard"></i></span></h4>
+                </div>
                 <hr>
                 <pre class="pre-html mb-0">&lt;span id="typed-text"&gt;&lt;/span&gt;</pre>
             </div>
             <div class="box-4">
-                <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-js-square"></i>&nbsp;&nbsp;JavaScript</span></h4>
+                <div class="code-copy-row">
+                    <h4><span class="badge badge-pill badge-light code-badge"><i class="fab fa-js-square"></i>&nbsp;&nbsp;JavaScript</span></h4>
+                    <h4><span class="badge badge-pill copy-single"><i class="far fa-clipboard"></i></span></h4>
+                </div>
                 <hr>
                 <pre class="pre-js">const typedSpace = document.getElementById('typed-text');<br>const typedText = 'INSERT TEXTNSERT TEXTNSERT'.split('');<br><br>for (let i = 0; i < typedText.length; i++) {<br><br>    setTimeout(function timer(){<br>        typedSpace.textContent += typedText[i];<br>    }, i * 50);<br><br>};</pre>
             </div>

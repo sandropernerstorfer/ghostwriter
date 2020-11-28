@@ -359,10 +359,23 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   align-items: center;
   width: 100%; }
 
+#copy-both {
+  display: inline-block;
+  cursor: pointer;
+  font-size: .7rem;
+  padding: 10px;
+  color: #333333; }
+
 .code-badge {
   color: var(--color3);
   background-color: var(--bg-color7);
   transition: background-color .5s,color .5s; }
+
+.code-copy-row {
+  display: flex;
+  justify-content: space-between; }
+  .code-copy-row .copy-single {
+    cursor: pointer; }
 
 .box-3, .box-4 {
   width: 90%;
