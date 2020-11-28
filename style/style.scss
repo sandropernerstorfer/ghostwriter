@@ -146,14 +146,11 @@ header{
 .modal-header{
     background-color: $mainYellow;
     color: $icyWhite;
+    border-bottom-color: $mainYellow;
 }
 
 .contact-message{
     resize: none;
-    border: 2px solid #ccc !important;
-    &:focus{
-        border-color: $mainBlue !important;
-    }
 }
 
 #submit-button{

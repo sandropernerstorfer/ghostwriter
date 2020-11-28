@@ -140,13 +140,11 @@ header {
 
 .modal-header {
   background-color: #FFC900;
-  color: #F7FCFC; }
+  color: #F7FCFC;
+  border-bottom-color: #FFC900; }
 
 .contact-message {
-  resize: none;
-  border: 2px solid #ccc !important; }
-  .contact-message:focus {
-    border-color: #4995FF !important; }
+  resize: none; }
 
 #submit-button {
   width: 100px; }
