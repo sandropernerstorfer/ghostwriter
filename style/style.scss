@@ -44,7 +44,7 @@
     --bg-color3: #fff;
     --bg-color4: #fff;
     --bg-color5: #fff;
-    --bg-color6: #037BFE;
+    --bg-color6: #FFC900;
     --bg-color7: #fff;
     --bg-color8: #FFC900;
     //----------------------colors
@@ -100,7 +100,27 @@ body{
     overflow-x: hidden;
     background-color: var(--bg-color1);
     padding: 0 16px;
-    transition: background-color .5s;
+}
+
+// -------------------------------------------- Theme Switch Page ------------ //
+
+#theme-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 100vh;
+    opacity: 0;
+    transition: width .6s;
+    #theme-icon{
+        font-size: 4rem;
+        opacity: 0;
+        transition: opacity .2s;
+    }
 }
 
 // -------------------------------------------- Header / Name ------------ //
@@ -113,7 +133,6 @@ header{
     padding: 20px 0 10px 0;
     height: 70px;
     background-color: var(--bg-color1);
-    transition: background-color .5s;
 }
 
 .header-logo{
@@ -149,7 +168,6 @@ header{
     -webkit-box-shadow: var(--box-shdw2);
     -moz-box-shadow: var(--box-shdw2);
     box-shadow: var(--box-shdw2);
-    transition: background-color .5s,box-shadow .5s;
 
     .tab{
         display: flex;
@@ -306,7 +324,6 @@ main{
     -webkit-box-shadow: var(--box-shdw1);
     -moz-box-shadow: var(--box-shdw1);
     box-shadow: var(--box-shdw1);
-    transition: background-color .5s,border-radius .5s,box-shadow .5s;
 }
 
 @media(max-width:400px){
@@ -325,7 +342,6 @@ main{
     flex-wrap: wrap;
     margin: 0 5px;
     background-color: var(--bg-color4);
-    transition: background-color .5s;
     .box-1,.box-2{
         flex: 1 1 30rem;
         margin: 20px 3%;
@@ -336,14 +352,12 @@ main{
         -webkit-box-shadow: var(--box-shdw3);
         -moz-box-shadow: var(--box-shdw3);
         box-shadow: var(--box-shdw3);
-        transition: background-color .5s,box-shadow .5s;
     }
 }
 
 .form-badge{
     color: var(--color2);
-    background-color: var(--bg-color6);
-    transition: background-color .5s,color .5s;
+    background: var(--bg-color6);
 }
 
 form .text-muted{
@@ -359,7 +373,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     background-color: var(--bg-color5);
     color: var(--color1);
     border-color: var(--border-color1);
-    transition: background-color .5s, color .5s, border-color .5s;
 }
 
 #timeInput{
@@ -368,7 +381,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     border-color: var(--border-color1);
     background-color: var(--bg-color5);
     -moz-appearance: textfield;
-    transition: background-color .5s,color .5s,border-color .5s;
 }
 
 .preview-output{
@@ -394,7 +406,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
         border-color: var(--border-color1);
         font-size: 1rem;
         background-color: var(--bg-color5);
-        transition: background-color .5s,border-color .5s,color .5s;
     }
     .output-window::-webkit-scrollbar {
         width: 0px;
@@ -478,7 +489,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 .code-badge{
     color: var(--color3);
     background-color: var(--bg-color7);
-    transition: background-color .5s,color .5s;
 }
 
 .box-3,.box-4{
@@ -487,7 +497,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     margin: 0 10px 0px 10px;
     padding: 20px 2%;
     background-color: var(--bg-color4);
-    transition: background-color .5s;
 }
 .box-3{
     border-bottom: none;
@@ -512,7 +521,6 @@ pre{
     color: var(--color4);
     background-color: rgba(204, 204, 204, 0.274);
     border-radius: 10px;
-    transition: color .5s;
 }
 
 .box-3 i{
@@ -533,7 +541,6 @@ pre{
 footer{
     background-color: var(--bg-color1);
     width: 100%;
-    transition: background-color .5s;
     .footer-box-1{
         display: flex;
         justify-content: space-between;
@@ -547,7 +554,6 @@ footer{
         -webkit-box-shadow: var(--box-shdw4);
         -moz-box-shadow: var(--box-shdw4);
         box-shadow: var(--box-shdw4);
-        transition: background-color .5s,border-radius .5s,box-shadow .5s;
         .footer-logo{
             img{
                 width: 2.8rem;
@@ -593,7 +599,6 @@ footer{
         background-color: var(--bg-color1);
         height: 70px;
         width: 100%;
-        transition: background-color .5s;
     }
 }
 
