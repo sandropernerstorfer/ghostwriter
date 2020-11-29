@@ -80,16 +80,52 @@ output.oninput = function() {
 
 
 
-// Code Copy Functionality
+// ----------------- Code Copy Functionality ---- //
 
-document.getElementById('copy-js').addEventListener('click', copyToClipboard);
+document.getElementById('copy-html').addEventListener('click', function(){collectToCopy('code-html');if(tooltipReady){showTooltip('tooltip-html');}});
+document.getElementById('copy-js').addEventListener('click', function(){collectToCopy('code-js');if(tooltipReady){showTooltip('tooltip-js');}});
+document.getElementById('copy-both').addEventListener('click', function(){collectToCopy('code-html','code-js');if(tooltipReady){showTooltip('tooltip-html','tooltip-js');}});
 
-function copyToClipboard(){
- 
-  let codeToBeCopied = document.getElementById('code-js').innerText;
+function collectToCopy(a,b){
+  if(b==undefined){
+    const singleCopy = document.getElementById(a).innerText;
+    copyToClipboard(singleCopy);
+  }
+  else{
+    const firstText = document.getElementById(a).innerText;
+    const secondText = document.getElementById(b).innerText;
+    const combinedText = firstText.concat('\n','\n',secondText);
+    copyToClipboard(combinedText);
+  }
+}
+
+function copyToClipboard(i){
   let tempTextarea = document.getElementById('copy-textarea');
-  tempTextarea.innerHTML = codeToBeCopied;
+  tempTextarea.innerHTML = i;
   tempTextarea.select();
   document.execCommand('copy');
+}
 
+// -------Tooltip Popup --- //
+
+let tooltipReady = true;
+
+function showTooltip(a,b){
+  tooltipReady = false;
+  if(b==undefined){
+    $('#'+a).toggleClass("toggle-hide toggle-show");
+    setTimeout(function(){
+      $('#'+a).toggleClass("toggle-hide toggle-show");
+      tooltipReady = true;
+    },600);
   }
+  else{
+    $('#'+a).toggleClass("toggle-hide toggle-show");
+    $('#'+b).toggleClass("toggle-hide toggle-show");
+    setTimeout(function(){
+      $('#'+a).toggleClass("toggle-hide toggle-show");
+      $('#'+b).toggleClass("toggle-hide toggle-show");
+      tooltipReady = true;
+    },600);
+  }
+}
