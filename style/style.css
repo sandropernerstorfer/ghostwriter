@@ -232,6 +232,7 @@ header {
   width: 100px; }
 
 .top-image {
+  z-index: 20;
   position: absolute;
   top: 80px;
   left: 50%;
@@ -255,6 +256,7 @@ header {
   50% {
     margin-top: -3px; } }
 main {
+  position: relative;
   height: 100%;
   width: 100%;
   padding: 80px 0;
@@ -447,6 +449,11 @@ pre {
 
 .box-4 i {
   color: #FFC900; }
+
+#github-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 30px; }
 
 footer {
   background-color: var(--bg-color1);
