@@ -383,7 +383,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .tooltip-single {
   position: absolute;
   display: inline-block;
-  font-family: "Nunito";
   padding: 5px;
   border-radius: 20px;
   top: 2px;
