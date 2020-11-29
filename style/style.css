@@ -209,7 +209,8 @@ header {
   padding: 10px;
   margin-bottom: 20px;
   font-weight: 200;
-  color: var(--color5); }
+  color: var(--color5);
+  cursor: default; }
 
 .modal-content {
   border: none;
@@ -220,7 +221,8 @@ header {
 .modal-header {
   background-color: var(--bg-color8);
   color: #F7FCFC;
-  border-bottom-color: #FFC900; }
+  border-bottom-color: #FFC900;
+  cursor: default; }
 
 #name {
   color: var(--color1);
@@ -308,7 +310,8 @@ main {
   background: var(--bg-color6); }
 
 form .text-muted {
-  font-size: .9rem; }
+  font-size: .9rem;
+  cursor: default; }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -331,7 +334,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   align-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  cursor: default; }
   .preview-output h4 {
     text-align: center;
     margin-bottom: 0px; }
@@ -399,7 +403,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   font-size: .8rem;
   color: #fff;
   opacity: 0;
-  transition: opacity .4s,right .4s; }
+  transition: opacity .4s,right .4s;
+  cursor: default; }
 
 #tooltip-js {
   background-color: #FFC900; }
@@ -417,7 +422,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .code-badge {
   color: var(--color3);
-  background-color: var(--bg-color7); }
+  background-color: var(--bg-color7);
+  cursor: default; }
 
 .box-3, .box-4 {
   width: 90%;
@@ -475,15 +481,13 @@ footer {
     -webkit-box-shadow: var(--box-shdw4);
     -moz-box-shadow: var(--box-shdw4);
     box-shadow: var(--box-shdw4); }
-    footer .footer-box-1 .footer-logo img {
-      width: 2.8rem;
-      height: 3rem; }
     footer .footer-box-1 .footer-logo span {
       margin-left: 10px;
       line-height: 3rem;
       color: #F7FCFC;
       font-size: 1.2rem;
-      font-family: "Fredoka"; }
+      font-family: "Fredoka";
+      cursor: default; }
     footer .footer-box-1 .footer-links {
       margin-right: 10px;
       font-size: 2rem;
