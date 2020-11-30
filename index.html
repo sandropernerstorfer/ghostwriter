@@ -88,10 +88,11 @@
                     <div class="form-group">
                         <label class="mb-0" for="input-range"><h5><span class="badge badge-pill badge-primary form-badge"><i class="fas fa-stopwatch"></i>&nbsp;&nbsp;Time</span></h5></label>
                         <br><span class="text-muted">&nbsp;in milliseconds</span>
-                        <input type="range" min="0" max="5000" value="0" class="slider form-control-range" id="input-range">
+                        <input type="range" min="0" max="2000" value="0" class="slider form-control-range" id="input-range">
                     </div>
-                    <div class="form-group mt-4">
-                      <input type="number" min="0" max="5000" class="form-control" id="timeInput">
+                    <div class="form-group mt-0 last-form-row">
+                      <input type="number" value="0" min="0" max="5000" class="form-control" id="timeInput">
+                      <button id="run-preview" type="button" class="btn">Run</button>
                     </div>
                 </form>
             </div>
@@ -100,7 +101,7 @@
                     <h4><span class="badge badge-pill badge-primary form-badge"><i class="fas fa-search"></i>&nbsp;&nbsp;Preview</span></h4>
                     <hr>
                     <div class="output-window">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sit quae placeat necessitatibus? Minus, maxime neque ipsa nisi voluptate enim?</span><br>
+                        <span id="dynamic-preview"></span>
                     </div>
                     <hr>
                 </div>
@@ -124,7 +125,7 @@
                     <h4><span id="copy-js" class="badge badge-pill copy-single copy-button"><i class="far fa-clipboard"></i></span></h4>
                 </div>
                 <hr>
-                <pre id="code-js" class="pre-js">const typedSpace = document.getElementById('typed-text');<br>const typedText = 'INSERT TEXTNSERT TEXTNSERT'.split('');<br><br>for (let i = 0; i < typedText.length; i++) {<br><br>    setTimeout(function timer(){<br>        typedSpace.textContent += typedText[i];<br>    }, i * 50);<br><br>};</pre>
+                <pre id="code-js" class="pre-js">const typedSpace = document.getElementById('typed-text');<br>const typedText = '<span id="dynamic-text"></span>'.split('');<br><br>for (let i = 0; i < typedText.length; i++) {<br><br>    setTimeout(function timer(){<br>        typedSpace.textContent += typedText[i];<br>    }, i * <span id="dynamic-time">0</span>);<br><br>};</pre>
             </div>
         </section>
         <div id="github-buttons">

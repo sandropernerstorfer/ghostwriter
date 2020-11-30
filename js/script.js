@@ -122,17 +122,33 @@ function showTooltip(a,b){
 
 
 // ------------- User Input ------------ //
-var slider = document.getElementById("input-range");
-var output = document.getElementById("timeInput");
-output.value = slider.value; // Display the default slider value
+const slider = document.getElementById("input-range");
+const text = document.getElementById('input-text');
+const output = document.getElementById("timeInput");
+const preview = document.getElementById("dynamic-preview");
+const codeText = document.getElementById('dynamic-text');
+const codeTime = document.getElementById('dynamic-time');
+const userBtn = document.getElementById('run-preview');
+const endBtn = document.getElementById('cancel-preview');
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.value = this.value;
+output.value = slider.value;
+
+text.oninput = function(){
+  codeText.innerText = this.value;
 }
 
+slider.oninput = function() {
+  output.value = this.value;
+  codeTime.innerText = this.value;
+}
 
-// Listen for input event on numInput.
+output.oninput = function() {
+  slider.value = this.value;
+  if(this.value==''){slider.value = '0';};
+  codeTime.innerText = this.value;
+  if(codeTime.innerText==''){codeTime.innerText = '0';}
+}
+
 output.onkeydown = function(e) {
     if(!((e.keyCode > 95 && e.keyCode < 106)
       || (e.keyCode > 47 && e.keyCode < 58) 
@@ -142,7 +158,45 @@ output.onkeydown = function(e) {
 }
 
 
-output.oninput = function() {
-  slider.value = this.value;
-  if(this.value==''){slider.value = 0};
-}
+userBtn.addEventListener('click',function(){dynamicInsert();});
+
+var counter = 0;
+var isRunning = false;
+
+function dynamicInsert(){
+
+    if(isRunning){
+      clearInterval(timer);
+      isRunning = false;
+      return;
+    }
+    else if(!isRunning){
+      preview.textContent = '';
+
+      userBtn.textContent = 'Stop';
+
+      isRunning = true;
+      var timer = setInterval(function () {
+  
+      const dynamicText = text.value.split('');
+  
+      if (counter < dynamicText.length) {
+  
+        preview.textContent += dynamicText[counter];
+  
+      }
+      
+      if (counter >= dynamicText.length || !isRunning){
+        clearInterval(timer);
+        counter = 0;
+        userBtn.textContent = "Run";
+        isRunning = false;
+        return;
+      }
+  
+      counter++;
+  
+      }, output.value);
+
+    }
+};

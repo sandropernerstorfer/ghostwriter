@@ -19,6 +19,7 @@
     --color5: #ccc;
     --color6: #000;
     --color7: #777777;
+    --color8: #000;
     //----------------------border-colors
     --border-color1: #333333;
     --border-color2: #FFC900;
@@ -55,6 +56,7 @@
     --color5: #272727;
     --color6: #777777;
     --color7: coral;
+    --color8: #fff;
     //----------------------border-colors
     --border-color1: #ccc;
     --border-color2: #ccc;
@@ -351,6 +353,7 @@ main{
         border-radius: 10px;
         background-color: var(--bg-color5);
         width: 50%;
+        max-width: 670px;
         -webkit-box-shadow: var(--box-shdw3);
         -moz-box-shadow: var(--box-shdw3);
         box-shadow: var(--box-shdw3);
@@ -398,6 +401,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
         margin-bottom: 0px;
     }
     .output-window{
+        word-wrap: break-word;
         overflow-y: scroll;
         width: 100%;
         height: 100%;
@@ -425,6 +429,31 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     border: none;
     box-shadow: none;
     border-bottom: 2px solid #ccc;
+    }
+}
+
+.last-form-row{
+    display: flex;
+    justify-content: flex-start;
+    button{
+        margin-left: 30px;
+        border-radius: 20px;
+        height: 40px;
+        width: 70px;
+        padding: 5px;
+        color: var(--color8);
+        font-family: "Nunito";
+        font-weight: 800;
+        background-color: #FFC900;
+        &:hover{
+            color: var(--color8);
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color: $mainYellow;
+            background-color: $mainYellow;
+        }
     }
 }
 
