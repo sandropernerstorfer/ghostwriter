@@ -2,28 +2,32 @@
 
 // ----- contact ----- //
 
-// const contactForm = document.getElementById('ghostwriter-contact');
-// let contactElements = contactForm.elements;   // 0=name , 1=email , 2=message , 3=submit , 4=close
+const contactForm = document.getElementById('ghostwriter-contact');
+const contactName = document.getElementById('name');
+const contactEmail = document.getElementById('email');
+const contactText = document.getElementById('message');
+const contactSubmit = document.getElementById('submit-button');
 
-// $("#name,#email,#message").on("change keyup paste", function(){
+$("#name,#email,#message").on("change keyup paste", function(){
 
-//   if(!contactElements[0].value == "" && !contactElements[1].value == "" && contactElements[1].value.includes('@') && contactElements[1].value.includes('.')  && !contactElements[2].value == ""){
-//     contactElements[3].disabled = false;
-//   }
-//   else{
-//     contactElements[3].disabled = true;
-//   };
+  if(!contactName.value == "" && !contactEmail.value == "" && contactEmail.value.includes('@') && contactEmail.value.includes('.')  && !contactText.value == ""){
+    contactSubmit.disabled = false;
+  }
+  else{
+    contactSubmit.disabled = true;
+  };
 
-// });
+});
 
-// $(contactElements[4]).click(function() {
-//   setTimeout(`contactForm.reset(); $('#submit-button').html('Send');`,300);
-// });
+$('#contact-close').click(function() {
+  setTimeout(`contactForm.reset(); $('#submit-button').html('Send');`,300);
+});
 
-// $("#submit-button").click(function(){
-//   $("#submit-button").html('<i class="fas fa-heart"></i>');
-//   setTimeout(`$('#contact-modal').modal('hide');`,1000);
-// })
+$("#submit-button").click(function(){
+  $("#submit-button").html('<i class="fas fa-heart"></i>');
+  setTimeout(`$('#contact-modal').modal('hide');`,1000);
+  setTimeout(`contactForm.reset(); $('#submit-button').html('Send').prop('disabled', true);`,1200);
+})
 
 // ------ light / dark mode ------ //
 
