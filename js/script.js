@@ -2,28 +2,28 @@
 
 // ----- contact ----- //
 
-const contactForm = document.getElementById('ghostwriter-contact');
-let contactElements = contactForm.elements;   // 0=name , 1=email , 2=message , 3=submit , 4=close
+// const contactForm = document.getElementById('ghostwriter-contact');
+// let contactElements = contactForm.elements;   // 0=name , 1=email , 2=message , 3=submit , 4=close
 
-$("#name,#email,#message").on("change keyup paste", function(){
+// $("#name,#email,#message").on("change keyup paste", function(){
 
-  if(!contactElements[0].value == "" && !contactElements[1].value == "" && contactElements[1].value.includes('@') && contactElements[1].value.includes('.')  && !contactElements[2].value == ""){
-    contactElements[3].disabled = false;
-  }
-  else{
-    contactElements[3].disabled = true;
-  };
+//   if(!contactElements[0].value == "" && !contactElements[1].value == "" && contactElements[1].value.includes('@') && contactElements[1].value.includes('.')  && !contactElements[2].value == ""){
+//     contactElements[3].disabled = false;
+//   }
+//   else{
+//     contactElements[3].disabled = true;
+//   };
 
-});
+// });
 
-$(contactElements[4]).click(function() {
-  setTimeout(`contactForm.reset(); $('#submit-button').html('Send');`,300);
-});
+// $(contactElements[4]).click(function() {
+//   setTimeout(`contactForm.reset(); $('#submit-button').html('Send');`,300);
+// });
 
-$("#submit-button").click(function(){
-  $("#submit-button").html('<i class="fas fa-heart"></i>');
-  setTimeout(`$('#contact-modal').modal('hide');`,1000);
-})
+// $("#submit-button").click(function(){
+//   $("#submit-button").html('<i class="fas fa-heart"></i>');
+//   setTimeout(`$('#contact-modal').modal('hide');`,1000);
+// })
 
 // ------ light / dark mode ------ //
 
