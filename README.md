@@ -1,6 +1,6 @@
 # Welcome to the Repo for Ghostwriter.js !
 
-[ghostwriter-js.tech](https://www.ghostwriter-js.tech)
+[ghostwriter-js.netlify.app](https://ghostwriter-js.netlify.app/)
 
 Ghostwriter is a tool that will take two user inputs :
 
