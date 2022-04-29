@@ -97,7 +97,13 @@ function copyToClipboard(i){
   let tempTextarea = document.getElementById('copy-textarea');
   tempTextarea.innerHTML = i;
   tempTextarea.select();
-  document.execCommand('copy');
+  try{
+    document.execCommand('copy');
+    console.log(2);
+  }
+  catch{
+    alert('Copy Command failed to execute due to incompatibilities')
+  }
 }
 
 // ---------------------------------- Code Copy Popup ----- //
@@ -108,7 +114,7 @@ function showTooltip(a,b){
   tooltipReady = false;
   if(b==undefined){
     $('#'+a).toggleClass("toggle-hide toggle-show");
-    setTimeout(function(){
+    setTimeout(() => {
       $('#'+a).toggleClass("toggle-hide toggle-show");
       tooltipReady = true;
     },600);
@@ -116,7 +122,7 @@ function showTooltip(a,b){
   else{
     $('#'+a).toggleClass("toggle-hide toggle-show");
     $('#'+b).toggleClass("toggle-hide toggle-show");
-    setTimeout(function(){
+    setTimeout(() => {
       $('#'+a).toggleClass("toggle-hide toggle-show");
       $('#'+b).toggleClass("toggle-hide toggle-show");
       tooltipReady = true;
@@ -141,19 +147,19 @@ text.oninput = function(){
   codeText.innerText = this.value;
 }
 
-slider.oninput = function() {
+slider.oninput = function(){
   output.value = this.value;
   codeTime.innerText = this.value;
 }
 
-output.oninput = function() {
+output.oninput = function(){
   slider.value = this.value;
   if(this.value==''){slider.value = '0';};
   codeTime.innerText = this.value;
   if(codeTime.innerText==''){codeTime.innerText = '0';}
 }
 
-output.onkeydown = function(e) {
+output.onkeydown = function(e){
     if(!((e.keyCode > 95 && e.keyCode < 106)
       || (e.keyCode > 47 && e.keyCode < 58) 
       || e.keyCode == 8)) {
@@ -164,8 +170,8 @@ output.onkeydown = function(e) {
 
 userBtn.addEventListener('click',function(){dynamicInsert();});
 
-var counter = 0;
-var isRunning = false;
+let counter = 0;
+let isRunning = false;
 
 function dynamicInsert(){
 
@@ -176,31 +182,21 @@ function dynamicInsert(){
     }
     else if(!isRunning){
       preview.textContent = '';
-
       userBtn.textContent = 'Stop';
-
       isRunning = true;
-      var timer = setInterval(function () {
-  
-      const dynamicText = text.value.split('');
-  
-      if (counter < dynamicText.length) {
-  
-        preview.textContent += dynamicText[counter];
-  
-      }
-      
-      if (counter >= dynamicText.length || !isRunning){
-        clearInterval(timer);
-        counter = 0;
-        userBtn.textContent = "Run";
-        isRunning = false;
-        return;
-      }
-  
-      counter++;
-  
+      var timer = setInterval(() => {
+        const dynamicText = text.value.split('');
+        if (counter < dynamicText.length) {
+          preview.textContent += dynamicText[counter];
+        }
+        if (counter >= dynamicText.length || !isRunning){
+          clearInterval(timer);
+          counter = 0;
+          userBtn.textContent = "Run";
+          isRunning = false;
+          return;
+        }
+        counter++;
       }, output.value);
-
     }
 };
