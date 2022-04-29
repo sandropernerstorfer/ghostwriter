@@ -99,7 +99,6 @@ function copyToClipboard(i){
   tempTextarea.select();
   try{
     document.execCommand('copy');
-    console.log(2);
   }
   catch{
     alert('Copy Command failed to execute due to incompatibilities')
