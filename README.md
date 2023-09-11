@@ -1,6 +1,6 @@
-# Welcome to the Repo for Ghostwriter.js !
+## Welcome to the Repo for Ghostwriter JS
 
-[ghostwriter-js.netlify.app](https://ghostwriter-js.netlify.app/)
+[Check it out on AWS Amplify!](https://master.d1b31r1235u833.amplifyapp.com/)
 
 Ghostwriter is a tool that will take two user inputs :
 
