@@ -1,6 +1,6 @@
 ## Welcome to the Repo for Ghostwriter JS
 
-[Check it out on AWS Amplify!](https://master.d1b31r1235u833.amplifyapp.com/)
+[Check it out on AWS Amplify!](https://master.dbg4lzqyjx8cj.amplifyapp.com/)
 
 Ghostwriter is a tool that will take two user inputs :
 
