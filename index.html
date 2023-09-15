@@ -34,9 +34,6 @@
     </header>
 <!-- NAV TABS -->
     <nav class="tabs-section">
-        <div class="tab" data-toggle="modal" data-target="#contact-modal">
-            <span><span class="tab-text">Contact</span><i class="fas fa-paper-plane"></i></span>
-        </div>
         <div class="tab" id="light-btn">
             <span><span class="tab-text">Light</span><i class="fas fa-sun"></i></span>
         </div>
@@ -47,35 +44,6 @@
             <img src="./assets/img/base/ghostwriter-icon-v2.png" alt="">
         </div>
     </nav>
-    <!-- Contact Modal -->
-    <div class="modal fade" id="contact-modal" data-backdrop="static" tabindex="-1" aria-labelledby="contact-modal-label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title ml-auto mr-auto" id="contact-modal-label">Contact &amp; Feedback</h5>
-                </div>
-                <div class="modal-body">
-                    <div id="contact-text">
-                        <p><p class="mb-0"><b>Feel free to get in contact with me</b><br>I'm looking forward to your Feedback/Collaboration Ideas !</p>
-                    </div>
-                    <form target="hidden-frame" id="ghostwriter-contact" method="POST" netlify>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                          </div>
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control contact-message" id="message" name="message" rows="5" placeholder="Message"></textarea>
-                          </div>
-                        <button type="submit" disabled id="submit-button" class="btn btn-warning mr-2">Send</button>
-                        <button type="button" id="contact-close" data-dismiss="modal" aria-label="Close" class="btn btn-outline-secondary">Close &times;</button>
-                      </form>
-                      <iframe name="hidden-frame" style="position:absolute; top:-1px; left:-1px; width:1px; height:1px; opacity: 0;"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 <!-- MAIN CONTENT -->
     <main>
         <section class="working-section">
@@ -108,7 +76,7 @@
             </div>
         </section>
         <section class="code-output mt-5" id="code-output-id">
-            <span id="copy-both" class="badge badge-pill badge-warning copy-button">COPY BOTH&nbsp;&nbsp;<i class="far fa-clipboard"></i></span>
+            <span id="copy-both" class="badge badge-pill badge-warning copy-button">Copy both&nbsp;&nbsp;<i class="far fa-clipboard"></i></span>
             <div class="box-3">
                 <div class="code-copy-row">
                     <span class="tooltip-single toggle-hide" id="tooltip-html">Copied !</span>
@@ -128,10 +96,6 @@
                 <pre id="code-js" class="pre-js">const typedSpace = document.getElementById('typed-text');<br>const typedText = '<span id="dynamic-text"></span>'.split('');<br><br>for (let i = 0; i < typedText.length; i++) {<br><br>    setTimeout(function timer(){<br>        typedSpace.textContent += typedText[i];<br>    }, i * <span id="dynamic-time">0</span>);<br><br>};</pre>
             </div>
         </section>
-        <div id="github-buttons">
-            <a class="github-button" href="https://github.com/sandropernerstorfer/ghostwriter-app" data-icon="octicon-star" aria-label="Star ghostwriter on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/sandropernerstorfer" aria-label="Follow @sandropernerstorfer on GitHub">Follow</a>
-        </div>
     </main>
     <textarea name="" id="copy-textarea" cols="30" rows="10">
     </textarea>
@@ -140,8 +104,9 @@
             <div class="footer-logo">
                 <span>ghostwriter-js</span>
             </div>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/sandro-pernerstorfer-3153b31ab/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div id="footer-links">
+                <a class="github-button" href="https://github.com/sandropernerstorfer/ghostwriter-app" data-icon="octicon-star" aria-label="Star ghostwriter on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/sandropernerstorfer" aria-label="Follow @sandropernerstorfer on GitHub">Follow</a>
             </div>
         </div>
         <div class="footer-box-2"></div>

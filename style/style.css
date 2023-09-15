@@ -237,28 +237,21 @@ header {
 }
 
 .tabs-section .tab:nth-child(1) {
+  opacity: var(--opacity2);
+  color: var(--color7);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-left: 10px;
-}
-
-.tabs-section .tab:nth-child(1):hover {
-  color: #4995FF;
-}
-
-.tabs-section .tab:nth-child(2) {
-  opacity: var(--opacity2);
-  color: var(--color7);
   -webkit-transition: opacity .5s, color .5s;
   transition: opacity .5s, color .5s;
 }
 
-.tabs-section .tab:nth-child(2):hover {
+.tabs-section .tab:nth-child(1):hover {
   opacity: 1;
   color: coral;
 }
 
-.tabs-section .tab:nth-child(3) {
+.tabs-section .tab:nth-child(2) {
   opacity: var(--opacity1);
   color: var(--color6);
   border-top-right-radius: 10px;
@@ -268,7 +261,7 @@ header {
   transition: opacity .5s, color .5s;
 }
 
-.tabs-section .tab:nth-child(3):hover {
+.tabs-section .tab:nth-child(2):hover {
   opacity: 1;
   color: #0B2027;
 }
@@ -287,58 +280,6 @@ header {
   body {
     padding: 0 0;
   }
-}
-
-#contact-text {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-weight: 200;
-  color: var(--color5);
-  cursor: default;
-}
-
-.modal-content {
-  border: none;
-  border-radius: 20px;
-  font-family: "Nunito";
-  background-color: var(--bg-color5);
-}
-
-.modal-header {
-  background-color: var(--bg-color8);
-  color: #F7FCFC;
-  border-bottom-color: #FFC900;
-  cursor: default;
-}
-
-#name {
-  color: var(--color1);
-  border-color: var(--border-color2);
-  background-color: var(--bg-color5);
-}
-
-#email {
-  color: var(--color1);
-  border-color: var(--border-color2);
-  background-color: var(--bg-color5);
-}
-
-.contact-message {
-  resize: none;
-  color: var(--color5);
-  background-color: var(--bg-color5);
-  border: 2px solid var(--border-color2) !important;
-  border-radius: 10px !important;
-}
-
-.contact-message:focus {
-  background-color: var(--bg-color5);
-  color: var(--color5);
-}
-
-#submit-button {
-  width: 100px;
 }
 
 .top-image {
@@ -760,4 +701,3 @@ footer .footer-box-2 {
     border-radius: 0px;
   }
 }
-/*# sourceMappingURL=style.css.map */

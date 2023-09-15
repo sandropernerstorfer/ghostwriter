@@ -48,6 +48,7 @@ else if(localTheme === 'dark'){
 function renderColor(x){
 
   if(x === "dark"){
+    if(localStorage.getItem('ghostwriterTheme') == "dark") return;
     $('#theme-page').css({'opacity':'1','background-color':'#242425','z-index':'200','width':'100vw'});
     $('#theme-icon').css({'opacity':'1','color':'#fff'}).removeClass('fa-sun').addClass('fa-moon');
     setTimeout(function(){
@@ -59,7 +60,7 @@ function renderColor(x){
     },1000);
   }
   else if(x === "light"){
-
+    if(localStorage.getItem('ghostwriterTheme') == "light") return;
     $('#theme-page').css({'opacity':'1','background-color':'#fff','z-index':'200','width':'100vw'});
     $('#theme-icon').css({'opacity':'1'});
     $('#theme-icon').css({'opacity':'1','color':'coral'}).removeClass('fa-moon').addClass('fa-sun');
@@ -101,7 +102,7 @@ function copyToClipboard(i){
     document.execCommand('copy');
   }
   catch{
-    alert('Copy Command failed to execute due to incompatibilities')
+    alert('Copy command failed to execute due to incompatibilities')
   }
 }
 
