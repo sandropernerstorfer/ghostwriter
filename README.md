@@ -1,14 +1,18 @@
-## Welcome to the Repo for Ghostwriter JS
+# Ghostwriter JS
+
+Generate code to animate your text.
 
 [Check it out on AWS Amplify!](https://main.d2krtq4ptna642.amplifyapp.com/)
 
-Ghostwriter is a tool that will take two user inputs :
-
+---
+Just enter the following two user inputs:
 * Text
 * Duration
 
----
+Inside the preview box, the given text will then be displayed letter after letter.
 
-Based on those inputs the text will be displayed letter after letter ,for the wanted duration, inside the Preview Window.
+The duration input controls the typing tempo.
 
-If you are happy with the Preview you will already find generated JavaScript & HTML that you can copy with a click and use that wherever you want!
+Based on your inputs, JavaScript & HTML code can be found at the bottom.
+
+Copy with one click and use it wherever you want!
