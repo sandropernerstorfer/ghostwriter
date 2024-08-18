@@ -2,8 +2,6 @@
 
 Generate code to animate your text.
 
-[Check it out on AWS Amplify!](https://main.d2krtq4ptna642.amplifyapp.com/)
-
 ---
 Just enter the following two user inputs:
 * Text
